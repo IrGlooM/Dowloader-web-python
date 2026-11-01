@@ -20,7 +20,7 @@ def download_video(url):
 
         with YoutubeDL(ydl_opts) as ydl:
           # Ambil info video dulu
-          info = ydl.extract_info(url_input, download=True)
+          info = ydl.extract_info(url, download=True)
           filename = ydl.prepare_filename(info)
 
         # Baca file yang sudah didownload ke memory
