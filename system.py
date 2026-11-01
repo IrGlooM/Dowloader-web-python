@@ -13,11 +13,11 @@ def download_video(url):
 
     
     try:
-      ydl_opts = {
+        ydl_opts = {
             "format": "best",  # Ambil kualitas terbaik
             "outtmpl": "%(id)s.%(ext)s",
         }
-
+        
         with YoutubeDL(ydl_opts) as ydl:
           # Ambil info video dulu
           info = ydl.extract_info(url, download=True)
