@@ -39,11 +39,11 @@ def download_video(url):
             file_name=f"{info.get('title', 'video')}.mp4",
             mime="video/mp4",
         )
-
-      except DownloadError:
+ 
+    except DownloadError:
         st.error(
             "Gagal mendownload. Periksa kembali URL YouTube Anda apakah"
             " valid/bisa diakses."
         )
-      except Exception as e:
+    except Exception as e:
         st.error(f"Terjadi kesalahan: {e}")
